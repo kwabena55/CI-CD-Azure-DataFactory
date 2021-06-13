@@ -1,0 +1,9 @@
+{
+	"name": "adfinstance55",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5e8da909-715a-4be4-98ae-b3d9c8bc281d",
+		"tenantId": "316aa4d3-f4ee-48f0-9ce7-cef2e1e2a331"
+	}
+}

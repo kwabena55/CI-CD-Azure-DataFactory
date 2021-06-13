@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfinstance55"
 		},
+		"ls_service_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},

@@ -19,7 +19,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Wait2",
+						"name": "Wait2_updated",
 						"type": "Wait",
 						"dependsOn": [],
 						"userProperties": [],

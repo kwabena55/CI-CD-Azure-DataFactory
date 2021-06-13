@@ -1,5 +1,5 @@
 {
-	"name": "pl_CICD demo",
+	"name": "pipeline1",
 	"properties": {
 		"activities": [
 			{

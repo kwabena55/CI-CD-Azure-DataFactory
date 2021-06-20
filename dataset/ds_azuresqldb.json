@@ -1,0 +1,38 @@
+{
+	"name": "ds_azuresqldb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuredb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FirstName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StartDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Salary",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Filename",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employeeerror"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "LoadAllfilesDynamically",
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "Get File Names",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_blob_emoployees_source_loop",
+						"referenceName": "ds_loadfiles",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -33,11 +33,11 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEachFileLoad",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata1",
+						"activity": "Get File Names",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -46,13 +46,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.ChildItems",
+						"value": "@activity('Get File Names').output.ChildItems",
 						"type": "Expression"
 					},
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "copyfile",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -110,7 +110,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_sink3",
+									"referenceName": "ds_employee_outputsink",
 									"type": "DatasetReference"
 								}
 							]
@@ -120,7 +120,7 @@
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2021-06-20T15:21:20Z"
+		"lastPublishTime": "2021-06-20T15:21:19Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

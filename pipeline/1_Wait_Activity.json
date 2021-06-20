@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "1_Wait_Activity",
 	"properties": {
 		"activities": [
 			{

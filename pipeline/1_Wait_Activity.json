@@ -1,0 +1,17 @@
+{
+	"name": "1_Wait_Activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait2_updated",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"annotations": []
+	}
+}

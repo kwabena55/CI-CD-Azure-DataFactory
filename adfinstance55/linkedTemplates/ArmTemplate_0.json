@@ -521,7 +521,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/LoadAllfilesDynamically')]",
+			"name": "[concat(parameters('factoryName'), '/2_LoadAllfilesDynamically')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -655,7 +655,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Loadfilesbasedonlastdate')]",
+			"name": "[concat(parameters('factoryName'), '/4_Loadfilesbasedonlastdate')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -792,7 +792,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipelinedemerrorhandlling')]",
+			"name": "[concat(parameters('factoryName'), '/3_pipelinedemerrorhandlling')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {

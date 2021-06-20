@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "adfinstance55"
 		},
+		"ls_azuredb_connectionString": {
+			"value": ""
+		},
+		"ls_blob_connectionString": {
+			"value": ""
+		},
 		"ls_service_connectionString": {
 			"value": ""
 		},

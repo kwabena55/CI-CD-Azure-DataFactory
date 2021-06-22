@@ -1,5 +1,5 @@
 {
-	"name": "6b_Load Parquet to CSV",
+	"name": "6b_Load Parquet to_CSV",
 	"properties": {
 		"activities": [
 			{

@@ -5,6 +5,9 @@
 			"referenceName": "ls_azuredb",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Source"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [

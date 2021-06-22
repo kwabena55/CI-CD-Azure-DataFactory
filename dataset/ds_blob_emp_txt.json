@@ -1,27 +1,27 @@
 {
-	"name": "ds_sink3",
+	"name": "ds_blob_emp_txt",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_blob",
+			"referenceName": "ls_blob_empcontainer",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "Destination"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "ffff",
-				"container": "employee"
+				"fileName": "emp.txt",
+				"container": "emp"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
-		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
 }

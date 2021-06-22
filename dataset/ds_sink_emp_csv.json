@@ -1,20 +1,16 @@
 {
-	"name": "ds_sink3",
+	"name": "ds_sink_emp_csv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_blob",
+			"referenceName": "ls_blob_empcontainer",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "Destination"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "ffff",
-				"container": "employee"
+				"container": "output"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -22,6 +18,5 @@
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }

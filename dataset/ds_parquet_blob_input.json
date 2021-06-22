@@ -1,0 +1,125 @@
+{
+	"name": "ds_parquet_blob_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_input_blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "NYCTripSmall.parquet",
+				"container": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "DateID",
+				"type": "INT32"
+			},
+			{
+				"name": "MedallionID",
+				"type": "INT32"
+			},
+			{
+				"name": "HackneyLicenseID",
+				"type": "INT32"
+			},
+			{
+				"name": "PickupTimeID",
+				"type": "INT32"
+			},
+			{
+				"name": "DropoffTimeID",
+				"type": "INT32"
+			},
+			{
+				"name": "PickupGeographyID",
+				"type": "INT32"
+			},
+			{
+				"name": "DropoffGeographyID",
+				"type": "INT32"
+			},
+			{
+				"name": "PickupLatitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "PickupLongitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "PickupLatLong",
+				"type": "UTF8"
+			},
+			{
+				"name": "DropoffLatitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "DropoffLongitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "DropoffLatLong",
+				"type": "UTF8"
+			},
+			{
+				"name": "PassengerCount",
+				"type": "INT32"
+			},
+			{
+				"name": "TripDurationSeconds",
+				"type": "INT32"
+			},
+			{
+				"name": "TripDistanceMiles",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "PaymentType",
+				"type": "UTF8"
+			},
+			{
+				"name": "FareAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "SurchargeAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TaxAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TipAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TollsAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TotalAmount",
+				"type": "DECIMAL",
+				"precision": 19,
+				"scale": 4
+			}
+		]
+	}
+}

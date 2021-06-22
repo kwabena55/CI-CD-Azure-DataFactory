@@ -1,0 +1,35 @@
+{
+	"name": "FixedlengthParseDF",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_blob_emp_txt",
+						"type": "DatasetReference"
+					},
+					"name": "Source"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_sink_emp_csv",
+						"type": "DatasetReference"
+					},
+					"name": "output"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Empid"
+				},
+				{
+					"name": "SelectColumns"
+				}
+			],
+			"script": "source(output(\n\t\tColumn_1 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> Source\nSource derive(Empid = substring(Column_1,1,4),\n\t\tEmpname = substring(Column_1,5,10),\n\t\tProvince = substring(Column_1,15,2),\n\t\tEmpContact = substring(Column_1,17,15)) ~> Empid\nEmpid select(mapColumn(\n\t\tEmpid,\n\t\tEmpname,\n\t\tProvince,\n\t\tEmpContact\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SelectColumns\nSelectColumns sink(allowSchemaDrift: true,\n\tvalidateSchema: true,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> output"
+		}
+	}
+}

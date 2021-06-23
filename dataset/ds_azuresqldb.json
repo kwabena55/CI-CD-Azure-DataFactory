@@ -1,6 +1,10 @@
 {
 	"name": "ds_azuresqldb",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuredb",
+			"type": "LinkedServiceReference"
+		},
 		"folder": {
 			"name": "Source"
 		},

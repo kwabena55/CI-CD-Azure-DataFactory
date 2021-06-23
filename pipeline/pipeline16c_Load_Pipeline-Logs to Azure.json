@@ -112,7 +112,7 @@
 								"value": "@pipeline().TriggerTime",
 								"type": "Expression"
 							},
-							"type": "String"
+							"type": "DateTime"
 						}
 					}
 				},

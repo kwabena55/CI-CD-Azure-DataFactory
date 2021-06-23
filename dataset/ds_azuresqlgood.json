@@ -1,10 +1,6 @@
 {
 	"name": "ds_azuresqlgood",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_azuredb",
-			"type": "LinkedServiceReference"
-		},
 		"folder": {
 			"name": "Source"
 		},

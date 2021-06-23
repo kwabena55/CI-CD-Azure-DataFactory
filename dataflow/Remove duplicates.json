@@ -1,0 +1,24 @@
+{
+	"name": "Remove duplicates",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_blob_duplicates",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "Aggregate1"
+				}
+			],
+			"script": "source(output(\n\t\tFirstName as string,\n\t\tGender as string,\n\t\tSalary as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(column1 = ERROR_FUNCTION(''),\n\t\teach(match(), ERROR_FUNCTION('') = ERROR_FUNCTION(''))) ~> Aggregate1"
+		}
+	}
+}

@@ -1,25 +1,36 @@
 {
-	"name": "ds_sink_emp_csv",
+	"name": "ds_blob_duplicates",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_blob_empcontainer",
+			"referenceName": "ls_input_blob",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "Destination"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "output"
+				"fileName": "duplicates.csv",
+				"container": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			}
+		]
 	}
 }
